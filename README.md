@@ -113,14 +113,12 @@ Users can run full scale calculations using interactive nodes `pukeko` and `puke
 
 First, you should log in either of them and open/create a directory to practice. In the created directory create a Python file `example1.py`:
 
----
 ```python
 print('Hello World!')
 a = 1
 b = 2
 print(a, b, a + b)
 ```
----
 
 Then load the appropriate module:
 ```bash
@@ -175,14 +173,12 @@ The example with Matlab is very similar, the main difference is that Matlab uses
 
 We start by creating a Matlab file `example1.m`:
 
----
 ```matlab
 disp('Hello World!')
 a = 1;
 b = 2;
 disp([a, b, a + b])
 ```
----
 
 Then load the appropriate module:
 ```bash
@@ -253,7 +249,6 @@ Log in `pukeko-fs` and choose the directory with `example1.py` and `example1.m`.
 
 Create a batch file `job_python.batch`:
 
----
 ```bash
 #!/bin/bash
 #SBATCH --export=ALL
@@ -277,7 +272,6 @@ python example1.py
 
 /home/QOQMS/slurm_scripts/job_epilogue.sh
 ```
----
 
 To submit the job run:
 ```bash
@@ -288,7 +282,6 @@ sbatch job_python.batch
 
 Create a batch file `job_matlab.batch`:
 
----
 ```bash
 #!/bin/bash
 #SBATCH --export=ALL
@@ -309,7 +302,6 @@ matlab -nodisplay -nodesktop -nojvm -singleCompThread -r "example1; exit"
 
 /home/QOQMS/slurm_scripts/job_epilogue.sh
 ```
----
 
 To submit the job run:
 ```bash
@@ -324,16 +316,13 @@ In case if the same simulation has to run with a variety of parameters the proce
 
 Let's create 2 new files, `input_pars.py`:
 
----
 ```python
 a = 1
 b = 2
 ```
----
 
 and `example2.py`:
 
----
 ```python
 import input_pars
 
@@ -341,7 +330,6 @@ print('Hello World!')
 print(input_pars.a, input_pars.b, input_pars.a + input_pars.b)
 
 ```
----
 
 By executing:
 
@@ -359,7 +347,6 @@ we obtain the same result as for `example2.py`.
 
 Now we want to run the same script for different parameters `a` and `b`, for that create a file `make_jobs.py`, which will create an individual directory and batch file for each job:
 
----
 ```bash
 import os
 
@@ -404,7 +391,6 @@ for a in range(3):
       f.write('\n')
       f.write('/home/QOQMS/slurm_scripts/job_epilogue.sh\n')
 ```
----
 
 Run this script:
 ```bash
