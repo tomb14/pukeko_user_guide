@@ -1,11 +1,3 @@
----
-
-version 2.1 
-
-11 Jun 2019
-
----
-
 # Introduction
 
 This guide provides a comprehensive overview of how to access and use Pukeko, Research Computing facilities to the [QOQMS group](http://qoqms.phys.strath.ac.uk/). 
