@@ -459,6 +459,15 @@ replacing `username` with your user name.
 
 * Also `--exclude` allows you to restrict your jobs to specific nodes, i.e. to decrease the total number of running jobs for the sake of sharing with other users.
 
+# Administration
+
+In this section we provide useful commands for administration of the cluster for users with sudo rights:
+
+* If a node `pukeko-[X]` is drained for some reason run:
+```bash
+scontrol update nodename=pukeko-[X] state=idle
+```
+
 # Feedback
 
 Please email all typos and suggestions to [anton.buyskikh@strath.ac.uk](anton.buyskikh@strath.ac.uk), your feedback would be much appreciated.
