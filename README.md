@@ -109,7 +109,7 @@ Pukeko uses environment modules to let users reproducibly use software of desire
 
 Users can run full scale calculations using interactive nodes `pukeko` and `pukeko-int`. Below we provide a couple of instructive examples.
 
-## Python example
+## Python Example
 
 First, you should log in either of them and open/create a directory to practice. In the created directory create a Python file `example1.py`:
 
@@ -167,7 +167,7 @@ then the standard output will be saved in `nohup.out` and the file with error me
 
 
 
-## Matlab example
+## Matlab Example
 
 The example with Matlab is very similar, the main difference is that Matlab uses it's own internal way of parallelizing calculations, thus then number of computation threads is defined differently.
 
@@ -341,7 +341,7 @@ export MKL_NUM_THREADS=1
 python example2.py
 ```
 
-we obtain the same result as for `example2.py`.
+we obtain the same result as for `example1.py`.
 
 > **Note:** The lines with `module` and `export` has to be executed only once for each SSH connection with Pukeko, and we added it here for reminding of its necessity as a good habit.
 
