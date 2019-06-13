@@ -29,7 +29,7 @@ Pukeko has the following nodes:
         * 24 cores per node
         * 128 GB RAM per node
 
-> **Note:** Full-scale calculations are not permitted on `pukeko-fs`, it's used only Slurm.
+> **Note:** Full-scale calculations are not permitted on `pukeko-fs`, it's used only for Slurm.
 
 # Accessing Pukeko
 
@@ -45,12 +45,12 @@ To connect to `pukeko-int` or `pukeko-fs` you should then enter: `ssh pukeko-int
 
 > **Note:** On campus and in the university VPN users can directly connect to `pukeko-fs` using:
 ```bash
-ssh userID@pukeko-fs.phys.strath.ac.uk
+ssh username@pukeko-fs.phys.strath.ac.uk
 ```
 
 > **Note:** In order to display programs graphically supply `-X` to the ssh command:
 ```bash
-ssh -X userID@pukeko.phys.strath.ac.uk
+ssh -X username@pukeko.phys.strath.ac.uk
 ```
 
 # Pukeko Storage & Data Transfer
@@ -309,6 +309,8 @@ sbatch job_matlab.batch
 ```
 
 After each job is done check the standard output file and make sure the error file is empty.
+
+> **Note:** For further modifications of batch files please see examples in the [ARCHIE-WeSt documentation](http://docs.hpc.strath.ac.uk/user-guide/example_scripts/). 
 
 ## Creation of Multiple Job Scripts
 
