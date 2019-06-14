@@ -50,7 +50,7 @@ ssh username@pukeko-fs.phys.strath.ac.uk
 
 > **Note:** In order to display programs graphically supply `-X` to the ssh command:
 ```bash
-ssh -X -Y username@pukeko.phys.strath.ac.uk
+ssh -X username@pukeko.phys.strath.ac.uk
 ```
 
 # Pukeko Storage & Data Transfer
