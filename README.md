@@ -159,9 +159,9 @@ Hello World!
 
 In case of long calcualtions the job can be sent to the background and the terminal can be disconnected from Pukeko and closed. For this you can use `nohup` by running:
 ```bash
-nohup python example1.py  </dev/null >nohup.out 2>nohup.err &
+nohup python -u example1.py </dev/null >nohup.out 2>nohup.err &
 ```
-then the standard output will be saved in `nohup.out` and the file with error messages `nohup.err` should be empty. Here `</dev/null` simply defined standard input of `nohup` to be empty.
+then the standard output will be saved in `nohup.out` and the file with error messages `nohup.err` should be empty. Here `</dev/null` simply defined standard input of `nohup` to be empty and `-u` stops buffering of standard input and outputs, i.e. `nohup.out` and `nohup.err` will be updated live.
 
 > **Note:**  For further reading about keeping remote SSH sessions and processes running after disconnection using `nohup` and `disown` refer to [this](https://support.ehelp.edu.au/support/solutions/articles/6000089713-tips-for-running-jobs-on-your-vm) and [that](https://www.tecmint.com/keep-remote-ssh-sessions-running-after-disconnection/).
 
