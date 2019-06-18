@@ -214,7 +214,7 @@ where `N` is the number of threads not greater than the number of cores.
 
 > **Note:** Refer to the [Matlab manual](https://uk.mathworks.com/help/matlab/ref/maxnumcompthreads.html) for running parallel jobs.
 
-## Monitoring Jobs
+## Monitoring Tasks
 
 Jobs sent to the background using `nohup` should be monitored for two reasons:
 1. The total number of compute threads should not be greater than the number of cores on the node.
