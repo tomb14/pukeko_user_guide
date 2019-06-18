@@ -214,7 +214,7 @@ where `N` is the number of threads not greater than the number of cores.
 
 > **Note:** Refer to the [Matlab manual](https://uk.mathworks.com/help/matlab/ref/maxnumcompthreads.html) for running parallel jobs.
 
-## Monitoring Jobs
+## Monitoring Tasks
 
 Jobs sent to the background using `nohup` should be monitored for two reasons:
 1. The total number of compute threads should not be greater than the number of cores on the node.
@@ -473,3 +473,5 @@ scontrol update nodename=pukeko-[X] state=idle
 # Feedback
 
 Please email all typos and suggestions to [anton.buyskikh@strath.ac.uk](anton.buyskikh@strath.ac.uk), your feedback would be much appreciated.
+
+Pukeko User Guide maintained by [Anton Buyskikh](https://github.com/anton-buyskikh), [Tomohiro Hashizume](https://github.com/zoome0215) and [Tom Bintener](https://github.com/tomb14).
