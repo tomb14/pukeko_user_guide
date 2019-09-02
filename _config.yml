@@ -1,3 +1,4 @@
 theme: jekyll-theme-leap-day
 title: Pukeko User Guide
-description: User Guide for Pukeko, Research Computing facilities to the QOQMS group at the Univeristy of Strathclyde
+gems:
+  - jekyll-last-modified-at
