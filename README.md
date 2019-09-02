@@ -109,16 +109,6 @@ Pukeko uses environment modules to let users reproducibly use software of desire
 
 Users can run full scale calculations using interactive nodes `pukeko` and `pukeko-int`. Below we provide a couple of instructive examples.
 
-In general, if one wants to limit the number of cpus, 
-
-You can use
-
-```
-taskset --cpu-list 1 command #for one CPU only
-taskset --cpu-list 1,2 command #for two CPUs
-```
-etc...
-
 ## Python Example
 
 First, you should log in either of them and open/create a directory to practice. In the created directory create a Python file `example1.py`:
