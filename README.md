@@ -442,7 +442,7 @@ all jobs from a given user are deleted.
 ``` 
 scancel -u USER_NAME -t PD/R
 ```   
-all pending (PD) or running (R) jobs from a given user are deleted.
+all pending (PD) or running (R) jobs from a given user are deleted, simply chose the appropriate flag.
 
 >
 ``` 
