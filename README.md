@@ -426,7 +426,7 @@ If a job or a range of jobs need to be cancelled, because e.g. the jobs will tak
 ```
 scancel  JOB_ID 
 ```
-which will delete the job identified by JOB_ID to prevent these jobs from running until that time.
+which will delete the job identified by JOB_ID to prevent these jobs from running until the specified time.
 
 Other useful options for canceling jobs:
 
