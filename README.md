@@ -424,13 +424,18 @@ will show the formatted list of jobs only for the user name `username`.
 If a job or a range of jobs need to be cancelled, because e.g. the jobs will take longer than the specified time in 
 ```#SBATCH --time 00:01:00```, you can use the following command:
 ```
-scancel  JOB_ID  # deletes the job identified by JOB_ID
+scancel  JOB_ID 
 ```
-to prevent these jobs from running until that time.
+which will delete the job identified by JOB_ID to prevent these jobs from running until that time.
 
 Other useful options for canceling jobs:
 
 By running:
+>
+``` 
+scancel JOB_ID1 JOB_ID2 ... JOB_IDN   
+```   
+all jobs with job_id's JOB_ID1, JOB_ID1, etc. are deleted.
 
 >
 ``` 
