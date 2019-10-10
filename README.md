@@ -432,14 +432,19 @@ Other useful options for canceling jobs:
 
 By running:
 
+>
 ``` 
 scancel -u USER_NAME 
 ```   
 all jobs from a given user are deleted. 
+
+>
 ``` 
 scancel -u USER_NAME -t PD/R
 ```   
 all pending (PD) or running (R) jobs from a given user are deleted.
+
+>
 ``` 
 echo {JOB_ID1..JOB_ID2} | xargs scancel 
 ```  
