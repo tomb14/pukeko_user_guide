@@ -32,12 +32,8 @@
           </li>
         </ul>
       </nav>
-      
       <section>
-        {{ page.last_modified_at }}
-      </section>
-      
-      <section>
+        This page was last updated at {{ "now" | date: "%Y-%m-%d %H:%M" }}.
         {{ content }}
       </section>  
     </div>
