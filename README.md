@@ -422,19 +422,27 @@ will show the formatted list of jobs only for the user name `username`.
 ## Canceling Jobs
 
 If a job or a range of jobs need to be cancelled, because e.g. the jobs will take longer than the specified time in 
-```#SBATCH --time 00:01:00```, you can use the command ```scancel``` to prevent these jobs from running until that time:
+```#SBATCH --time 00:01:00```, you can use the following command:
 ```
 scancel  JOB_ID  # deletes the job identified by JOB_ID
 ```
+to prevent these jobs from running until that time.
+
 Other useful options for canceling jobs:
 
 By running:
 
-``` scancel -u USER_NAME ```   
+``` 
+scancel -u USER_NAME 
+```   
 all jobs from a given user are deleted. 
-``` scancel -u USER_NAME -t PD/R ```   
+``` 
+scancel -u USER_NAME -t PD/R
+```   
 all pending (PD) or running (R) jobs from a given user are deleted.
-``` echo {JOB_ID1..JOB_ID2} | xargs scancel ```  
+``` 
+echo {JOB_ID1..JOB_ID2} | xargs scancel 
+```  
 all jobs with job_id's between JOB_ID1 and JOB_ID2 (both included) are deleted.
 
 # Scalability
