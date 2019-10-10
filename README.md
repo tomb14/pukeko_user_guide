@@ -421,7 +421,8 @@ will show the formatted list of jobs only for the user name `username`.
 
 ## Canceling Jobs
 
-If a job or a range of jobs need to be cancelled, e.g. the jobs will take longer than the specified time in f.write('#SBATCH --time 00:01:00\n') so they will not finish, you can use the command scancel to avoid the jobs from running until that time:
+If a job or a range of jobs need to be cancelled, because e.g. the jobs will take longer than the specified time in 
+```'#SBATCH --time 00:01:00\n')```, you can use the command ```scancel``` to prevent these jobs from running until that time:
 ```
 scancel  JOB_ID  # deletes the job identified by JOB_ID
 ```
@@ -487,4 +488,4 @@ scontrol update nodename=pukeko-[X] state=idle
 
 Please email all typos and suggestions to [anton.buyskikh@strath.ac.uk](anton.buyskikh@strath.ac.uk), your feedback would be much appreciated.
 
-Pukeko User Guide maintained by [Anton Buyskikh](https://github.com/anton-buyskikh), [Tomohiro Hashizume](https://github.com/zoome0215), [Tom Bintener](https://github.com/tomb14) and [Jorge Yago Malo](https://github.com/jyagom).
+Pukeko User Guide maintained by [Anton Buyskikh](https://github.com/anton-buyskikh), [Tomohiro Hashizume](https://github.com/zoome0215), [Tom Bintener](https://github.com/tomb14), and [Jorge Yago Malo](https://github.com/jyagom).
