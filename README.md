@@ -455,6 +455,8 @@ echo {JOB_ID1..JOB_ID2} | xargs scancel
 ```  
 all jobs with job_id's between JOB_ID1 and JOB_ID2 (both included) are deleted.
 
+For additional information on how to use ```scancel``` refer to this [documentation](https://slurm.schedmd.com/scancel.html). 
+
 # Scalability
 
 The performance of parallelized codes can vary widely depending on the chosen [methods](https://en.wikipedia.org/wiki/Parallel_computing). Please refer to the [ARCHIE-WeSt Scalability page](http://docs.hpc.strath.ac.uk/user-guide/scalability/) for a general quidance and to the [performance characterisation and benchmarking](https://www.epcc.ed.ac.uk/research/computing/performance-characterisation-and-benchmarking) by EPCC for further reading on benchmarking.
