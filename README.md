@@ -419,6 +419,19 @@ alias squeueextrame='squeueextra -u username'
 ```
 will show the formatted list of jobs only for the user name `username`.
 
+## Canceling Jobs
+
+If a job or a range of jobs need to be cancelled, e.g. the jobs will take longer than the specified time in f.write('#SBATCH --time 00:01:00\n') so they will not finish, you can use the command scancel to avoid the jobs from running until that time:
+```
+scancel  JOB_ID  # deletes the job identified by JOB_ID
+```
+Other useful options for canceling jobs:
+```
+scancel -u USER_NAME       # deletes all jobs from a given user
+scancel --state=pending/running    # deletes all jobs that are pending/running
+echo {JOB_ID1..JOB_ID2} | xargs scancel   # deletes all jobs between JOB_ID1 and JOB_ID2 (both included)
+```
+
 # Scalability
 
 The performance of parallelized codes can vary widely depending on the chosen [methods](https://en.wikipedia.org/wiki/Parallel_computing). Please refer to the [ARCHIE-WeSt Scalability page](http://docs.hpc.strath.ac.uk/user-guide/scalability/) for a general quidance and to the [performance characterisation and benchmarking](https://www.epcc.ed.ac.uk/research/computing/performance-characterisation-and-benchmarking) by EPCC for further reading on benchmarking.
@@ -474,4 +487,4 @@ scontrol update nodename=pukeko-[X] state=idle
 
 Please email all typos and suggestions to [anton.buyskikh@strath.ac.uk](anton.buyskikh@strath.ac.uk), your feedback would be much appreciated.
 
-Pukeko User Guide maintained by [Anton Buyskikh](https://github.com/anton-buyskikh), [Tomohiro Hashizume](https://github.com/zoome0215) and [Tom Bintener](https://github.com/tomb14).
+Pukeko User Guide maintained by [Anton Buyskikh](https://github.com/anton-buyskikh), [Tomohiro Hashizume](https://github.com/zoome0215), [Tom Bintener](https://github.com/tomb14) and [Jorge Yago Malo](https://github.com/jyagom).
